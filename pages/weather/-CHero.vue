@@ -57,16 +57,6 @@ export default {
     box-shadow: 0 4px 5px 0 #00000048;
 
     /* background-image: url('~assets/images/weather/hero/hero_morning.jpeg'); */
-
-    &::before {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-    }
   }
 }
 

@@ -9,10 +9,10 @@
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/weather">天気</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/weather">weather</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/news">ニュース</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
           </li>
           <li class="l-nav__item">
             <nuxt-link class="l-nav__link" to="/qiiita">qiiita</nuxt-link>

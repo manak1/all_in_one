@@ -61,6 +61,7 @@ export default {
     height: 96px;
     margin: 0 auto;
     background-color: #222;
+    border-radius: 8px;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.28235);
   }
 }
@@ -68,7 +69,7 @@ export default {
 .c-list {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 6px;
 
   &__item {
     padding: 0 8px;
