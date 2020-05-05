@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     getDayList() {
-      return this.weathers.slice(0, 4)
+      return this.weathers.slice(0, 8)
     }
   },
   mounted() {
@@ -68,11 +68,12 @@ export default {
 
 .c-list {
   display: flex;
-  justify-content: center;
-  padding: 6px;
+  padding: 6px 12px;
+  margin: 0 12px;
+  overflow: scroll;
 
   &__item {
-    padding: 0 8px;
+    min-width: 56px;
     text-align: center;
   }
 
@@ -84,6 +85,7 @@ export default {
   &__img {
     display: block;
     height: 40px;
+    margin: 0 auto;
   }
 
   &__temp {

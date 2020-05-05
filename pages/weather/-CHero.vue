@@ -24,11 +24,15 @@ export default {
   computed: {
     weatherIcon() {
       const currentWeather = this.weatherInfo.weather[0].main
-      if (currentWeather === 'Rain') {
-        return require('@/assets/images/weather/weather_rain.svg')
-      } else {
-        return require('@/assets/images/weather/weather_rain.svg')
+      switch (currentWeather) {
+        case 'Clear':
+          return require('@/assets/images/weather/weather_sunny.svg')
+        case 'Rain':
+          return require('@/assets/images/weather/weather_rain.svg')
+        case 'Clouds':
+          return require('@/assets/images/weather/weather_cloudy.svg')
       }
+      return require('@/assets/images/weather/weather_sunny.svg')
     }
   },
   mounted() {

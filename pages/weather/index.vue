@@ -3,7 +3,7 @@
     <div class="c-container">
       <c-hero :weather-info="weather" />
       <c-day :weathers="weathers" />
-      <c-calander :weathers="weathers" />
+      <c-week :weathers="weathers" />
     </div>
   </section>
 </template>
@@ -11,11 +11,11 @@
 <script>
 import { weatherMapper } from '@/store/weather'
 import CHero from '@/pages/weather/-CHero'
-import CCalander from '@/pages/weather/-CCalander'
+import CWeek from '@/pages/weather/-CWeek'
 import CDay from '@/pages/weather/-CDay'
 
 export default {
-  components: { CHero, CCalander, CDay },
+  components: { CHero, CWeek, CDay },
   async asyncData({ store, $axios }) {
     try {
       const data = await $axios.get(
