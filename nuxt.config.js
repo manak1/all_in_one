@@ -1,4 +1,6 @@
+// eslint-disable-next-line nuxt/no-cjs-in-config
 const Sass = require('sass')
+// eslint-disable-next-line nuxt/no-cjs-in-config
 const Fiber = require('fibers')
 
 export default {
