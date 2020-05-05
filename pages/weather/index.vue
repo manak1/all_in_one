@@ -18,9 +18,6 @@ export default {
   },
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' })
-  },
-  mounted() {
-    console.log(this.weather)
   }
 }
 </script>

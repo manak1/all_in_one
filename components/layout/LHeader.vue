@@ -9,7 +9,7 @@
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">天気</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/weather">天気</nuxt-link>
           </li>
           <li class="l-nav__item">
             <nuxt-link class="l-nav__link" to="/">ニュース</nuxt-link>
