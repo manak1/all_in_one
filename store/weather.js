@@ -13,10 +13,10 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchItems({ commit }) {
-    await this.$axios
+  async fetchItems({ commit, $axios }) {
+    await $axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
       )
       .then((response) => {
         commit('setWeather', { weatherInfo: response.data })
