@@ -3,7 +3,7 @@
     <div class="c-day__card">
       <ol class="c-list">
         <li v-for="item in getDayList" :key="item.dt_txt" class="c-list__item">
-          <date class="c-list__time"> {{ getHour(item.dt_txt) }} </date>
+          <time class="c-list__time"> {{ getHour(item.dt_txt) }} </time>
           <img
             class="c-list__img"
             :src="weatherIcon(item.weather[0].main)"

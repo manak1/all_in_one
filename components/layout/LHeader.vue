@@ -3,13 +3,15 @@
     <div class="l-header__wrapper">
       <div class="l-head">
         <h1 class="l-head__title">
-          ALL IN ONE
+          名前はまだない
         </h1>
       </div>
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/weather">weather</nuxt-link>
+            <nuxt-link class="l-nav__link--active" to="/weather"
+              >weather</nuxt-link
+            >
           </li>
           <li class="l-nav__item">
             <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
@@ -38,7 +40,7 @@ export default {}
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {
-    padding: 0.3rem 0.8rem 0.8rem;
+    padding: 0.5rem 0.8rem 0.8rem;
   }
 }
 
@@ -65,6 +67,12 @@ export default {}
     display: inline-block;
     padding: 0 1rem;
     font-size: 1.2rem;
+
+    &--active {
+      @extend .l-nav__link;
+
+      border-bottom: 1px solid #fff;
+    }
   }
 }
 </style>
