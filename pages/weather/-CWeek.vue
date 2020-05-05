@@ -14,7 +14,8 @@
             alt=""
           />
           <p class="c-list__temp">
-            {{ Math.floor(day.main.temp_max) + '°' }}/
+            {{ Math.floor(day.main.temp_max) + '°' }}
+            /
             {{ Math.floor(day.main.temp_min) + '°' }}
           </p>
         </li>
@@ -85,7 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 .c-week {
-  margin-top: 40px;
+  margin-top: 24px;
 
   &__card {
     width: 320px;
@@ -102,6 +103,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 4px 0;
+    border-bottom: 1px solid #fff;
   }
 
   &__day {
