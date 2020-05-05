@@ -3,12 +3,16 @@ import { createNamespacedHelpers } from 'vuex'
 export const weatherMapper = createNamespacedHelpers('weather')
 
 export const state = () => ({
-  weatherInfo: {}
+  weatherInfo: {},
+  weatherList: {}
 })
 
 export const mutations = {
   setWeather(state, weatherInfo) {
     state.weatherInfo = weatherInfo
+  },
+  setWeathers(state, weathers) {
+    state.weatherList = weathers
   }
 }
 

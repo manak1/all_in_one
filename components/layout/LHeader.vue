@@ -3,7 +3,7 @@
     <div class="l-header__wrapper">
       <div class="l-head">
         <h1 class="l-head__title">
-          タイトルはまだない
+          ALL IN ONE
         </h1>
       </div>
       <nav class="l-nav">
@@ -12,10 +12,10 @@
             <nuxt-link class="l-nav__link" to="/weather">天気</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">ニュース</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/news">ニュース</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">qiiita</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/qiiita">qiiita</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -30,10 +30,11 @@ export default {}
 <style lang="scss" scoped>
 .l-header {
   position: fixed;
+  z-index: 999;
   width: 100%;
   max-height: 60px;
   margin-bottom: 60px;
-  background-color: #0084ff;
+  background-color: #222;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {

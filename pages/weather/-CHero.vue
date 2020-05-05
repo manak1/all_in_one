@@ -25,9 +25,9 @@ export default {
     weatherIcon() {
       const currentWeather = this.weatherInfo.weather[0].main
       if (currentWeather === 'Rain') {
-        return require('@/assets/images/weather/hero/hero_rain.svg')
+        return require('@/assets/images/weather/weather_rain.svg')
       } else {
-        return require('@/assets/images/weather/hero/hero_rain.svg')
+        return require('@/assets/images/weather/weather_rain.svg')
       }
     }
   },
@@ -49,12 +49,14 @@ export default {
     height: 140px;
     padding: 1.5rem;
     margin: 0 auto;
-    background-image: url('~assets/images/weather/hero/hero_morning.jpeg');
+    background-color: #222;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 4px 5px 0 #00000048;
+
+    /* background-image: url('~assets/images/weather/hero/hero_morning.jpeg'); */
 
     &::before {
       position: absolute;
@@ -63,6 +65,7 @@ export default {
       height: 100%;
       content: '';
       background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
     }
   }
 }
