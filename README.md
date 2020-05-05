@@ -1,5 +1,5 @@
-# Metamon
-どのプロジェクトでも使用できるNuxtテンプレ。
+# ALL IN ONE
+自分用に作成する予定のウェブアプリ
 
 導入済みmodule
 - eslint
