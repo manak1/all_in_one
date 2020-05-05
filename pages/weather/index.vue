@@ -2,7 +2,6 @@
   <section class="p-weather">
     <div class="c-container">
       <c-hero v-if="weather" :weather-info="weather" />
-      {{ weather }}
     </div>
   </section>
 </template>
@@ -33,6 +32,6 @@ export default {
 <style lang="scss" scoped>
 .p-weather {
   width: 100%;
-  padding-top: 32px;
+  padding-top: 92px;
 }
 </style>

@@ -55,10 +55,20 @@ export default {
     background-size: cover;
     border-radius: 4px;
     box-shadow: 0 4px 5px 0 #00000048;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
 .c-info {
+  z-index: 2;
   width: 60%;
 
   &__title {
@@ -89,6 +99,7 @@ export default {
 }
 
 .c-weather {
+  z-index: 2;
   width: 40%;
 
   &__img {

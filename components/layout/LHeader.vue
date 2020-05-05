@@ -29,10 +29,12 @@ export default {}
 
 <style lang="scss" scoped>
 .l-header {
+  position: fixed;
   width: 100%;
   max-height: 60px;
+  margin-bottom: 60px;
   background-color: #0084ff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {
     padding: 0.3rem 0.8rem 0.8rem;
