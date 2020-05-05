@@ -3,19 +3,21 @@
     <div class="l-header__wrapper">
       <div class="l-head">
         <h1 class="l-head__title">
-          タイトルはまだない
+          名前はまだない
         </h1>
       </div>
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">天気</nuxt-link>
+            <nuxt-link class="l-nav__link--active" to="/weather"
+              >weather</nuxt-link
+            >
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">ニュース</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/">qiiita</nuxt-link>
+            <nuxt-link class="l-nav__link" to="/qiiita">qiiita</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -29,13 +31,16 @@ export default {}
 
 <style lang="scss" scoped>
 .l-header {
+  position: fixed;
+  z-index: 999;
   width: 100%;
   max-height: 60px;
-  background-color: #0084ff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 60px;
+  background-color: #222;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {
-    padding: 0.3rem 0.8rem 0.8rem;
+    padding: 0.5rem 0.8rem 0.8rem;
   }
 }
 
@@ -62,6 +67,12 @@ export default {}
     display: inline-block;
     padding: 0 1rem;
     font-size: 1.2rem;
+
+    &--active {
+      @extend .l-nav__link;
+
+      border-bottom: 1px solid #fff;
+    }
   }
 }
 </style>
