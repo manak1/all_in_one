@@ -40,7 +40,7 @@ export default {}
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {
-    padding: 0.5rem 0.8rem 0.8rem;
+    padding: 1rem 0.8rem 1rem;
   }
 }
 
@@ -52,6 +52,7 @@ export default {}
 
     font-size: 1.8rem;
     font-weight: normal;
+    line-height: 1;
   }
 }
 

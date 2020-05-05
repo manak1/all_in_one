@@ -41,6 +41,6 @@ export default {
 <style lang="scss" scoped>
 .p-weather {
   width: 100%;
-  padding-top: 92px;
+  padding-top: 72px;
 }
 </style>
