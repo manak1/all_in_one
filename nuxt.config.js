@@ -3,6 +3,9 @@ const Sass = require('sass')
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const Fiber = require('fibers')
 
+require('dotenv').config()
+const { WEATHER_API_KEY } = process.env
+
 export default {
   mode: 'universal',
   /*
@@ -60,6 +63,10 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  env: {
+    WEATHER_API_KEY
+  },
   /*
    ** Build configuration
    */
