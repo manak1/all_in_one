@@ -1,6 +1,10 @@
 # ALL IN ONE
 自分用に作成する予定のウェブアプリ
 
+URL: https://aiopenguin.netlify.app
+
+デザイン: https://xd.adobe.com/view/e068c74e-7a67-468d-4b4b-d52581ebc1c4-9659/
+
 導入済みmodule
 - eslint
 - stylelint
