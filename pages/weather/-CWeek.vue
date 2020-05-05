@@ -85,7 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 .c-week {
-  margin-top: 40px;
+  margin-top: 24px;
 
   &__card {
     width: 320px;

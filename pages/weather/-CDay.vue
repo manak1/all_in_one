@@ -54,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 .c-day {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 24px;
 
   &__card {
     width: 320px;
