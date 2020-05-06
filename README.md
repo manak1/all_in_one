@@ -1,5 +1,6 @@
 # ALL IN ONE
 自分用に作成する予定のウェブアプリ
+pwa対応しています(°▽°)
 
 URL: https://aiopenguin.netlify.app
 
