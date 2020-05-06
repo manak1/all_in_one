@@ -1,5 +1,5 @@
 <template>
-  <section v-if="weather" class="p-weather">
+  <section v-if="weather && weathers" class="p-weather">
     <div class="c-container">
       <c-hero :weather-info="weather" />
       <c-day :weathers="weathers" />
