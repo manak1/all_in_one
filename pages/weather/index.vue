@@ -16,7 +16,7 @@ import CDay from '@/pages/weather/-CDay'
 
 export default {
   components: { CHero, CWeek, CDay },
-  async asyncData({ store, app }) {
+  async fetch({ store, app }) {
     try {
       const data = await app.$axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
