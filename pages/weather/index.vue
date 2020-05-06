@@ -21,7 +21,6 @@ export default {
       const data = await app.$axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
       )
-      console.log('worked', data)
       await store.commit('weather/setWeather', data.data)
 
       const data2 = await app.$axios.get(
