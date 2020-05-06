@@ -9,15 +9,13 @@
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link--active" to="/weather"
-              >weather</nuxt-link
-            >
+            <a class="l-nav__link--active" href="/weather">weather</a>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
+            <a class="l-nav__link" href="/news">news</a>
           </li>
           <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/qiiita">qiiita</nuxt-link>
+            <a class="l-nav__link" href="/qiiita">qiiita</a>
           </li>
         </ul>
       </nav>

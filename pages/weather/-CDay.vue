@@ -29,9 +29,7 @@ export default {
       return this.weathers.slice(0, 8)
     }
   },
-  mounted() {
-    console.log(this.weathers)
-  },
+
   methods: {
     getHour(dateTime) {
       const splited = dateTime.split(' ')

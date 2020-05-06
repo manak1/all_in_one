@@ -56,13 +56,25 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  manifest: {
+    name: 'AllInOne',
+    lang: 'ja',
+    title: 'AllInOne',
+    theme_color: '#22222',
+    background_color: '#fffff',
+    'og:title': 'AllInOne',
+    description: '自分のための自分によるwebアプリ',
+    'og:description': '自分のための自分によるwebアプリ'
+  },
 
   env: {
     WEATHER_API_KEY

@@ -34,9 +34,6 @@ export default {
       }
       return require('@/assets/images/weather/weather_sunny.svg')
     }
-  },
-  mounted() {
-    console.log(this.weatherInfo)
   }
 }
 </script>

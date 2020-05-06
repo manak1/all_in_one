@@ -1,5 +1,5 @@
 <template>
-  <section v-if="weather" class="p-weather">
+  <section v-if="dataLoaded" class="p-weather">
     <div class="c-container">
       <c-hero :weather-info="weather" />
       <c-day :weathers="weathers" />
@@ -16,24 +16,31 @@ import CDay from '@/pages/weather/-CDay'
 
 export default {
   components: { CHero, CWeek, CDay },
-  async asyncData({ store, $axios }) {
+  async fetch({ store, app }) {
     try {
-      const data = await $axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
+      const data = await app.$axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
       )
       await store.commit('weather/setWeather', data.data)
 
-      const data2 = await $axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
+      const data2 = await app.$axios.get(
+        `https://api.openweathermap.org/data/2.5/forecast?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
       )
       await store.commit('weather/setWeathers', data2.data.list)
     } catch (err) {
-      console.log(err)
+      console.log(err, 'エラー起きたっぽい')
     }
   },
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' }),
-    ...weatherMapper.mapState({ weathers: 'weatherList' })
+    ...weatherMapper.mapState({ weathers: 'weatherList' }),
+
+    dataLoaded() {
+      if (this.weathers.length >= 1) {
+        return true
+      }
+      return false
+    }
   }
 }
 </script>
