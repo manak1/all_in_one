@@ -9,12 +9,13 @@
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <nuxt-link v-if="weather" to="/weather" class="l-nav__link--active"
-              >nuxt weather</nuxt-link
+            <nuxt-link
+              v-if="weatherLoaded"
+              to="/weather"
+              class="l-nav__link--active"
+              >weather</nuxt-link
             >
-            <a v-else class="l-nav__link--active" href="/weather"
-              >real weather</a
-            >
+            <a v-else class="l-nav__link--active" href="/weather">weather</a>
           </li>
           <li class="l-nav__item">
             <a class="l-nav__link" href="/news">news</a>
@@ -33,10 +34,14 @@ import { weatherMapper } from '@/store/weather'
 export default {
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' }),
-    ...weatherMapper.mapState({ weathers: 'weatherList' })
-  },
-  mounted() {
-    console.log(this.weather)
+    ...weatherMapper.mapState({ weathers: 'weatherList' }),
+    weatherLoaded() {
+      if (Object.entries(this.weather).length) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>
