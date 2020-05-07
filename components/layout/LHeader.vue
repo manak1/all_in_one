@@ -18,10 +18,10 @@
             <a v-else class="l-nav__link--active" href="/weather">weather</a>
           </li>
           <li class="l-nav__item">
-            <a class="l-nav__link" href="/news">news</a>
+            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <a class="l-nav__link" href="/qiiita">qiiita</a>
+            <nuxt-link class="l-nav__link" to="/qiita">qiita</nuxt-link>
           </li>
         </ul>
       </nav>
