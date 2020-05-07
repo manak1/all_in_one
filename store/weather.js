@@ -7,6 +7,12 @@ export const state = () => ({
   weatherList: {}
 })
 
+export const getters = {
+  weather(state) {
+    return state.weatherInfo
+  }
+}
+
 export const mutations = {
   setWeather(state, weatherInfo) {
     state.weatherInfo = weatherInfo

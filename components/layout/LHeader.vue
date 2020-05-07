@@ -9,13 +9,19 @@
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item">
-            <a class="l-nav__link--active" href="/weather">weather</a>
+            <nuxt-link
+              v-if="weatherLoaded"
+              to="/weather"
+              class="l-nav__link--active"
+              >weather</nuxt-link
+            >
+            <a v-else class="l-nav__link--active" href="/weather">weather</a>
           </li>
           <li class="l-nav__item">
-            <a class="l-nav__link" href="/news">news</a>
+            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
           </li>
           <li class="l-nav__item">
-            <a class="l-nav__link" href="/qiiita">qiiita</a>
+            <nuxt-link class="l-nav__link" to="/qiita">qiita</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -24,7 +30,20 @@
 </template>
 
 <script>
-export default {}
+import { weatherMapper } from '@/store/weather'
+export default {
+  computed: {
+    ...weatherMapper.mapState({ weather: 'weatherInfo' }),
+    ...weatherMapper.mapState({ weathers: 'weatherList' }),
+    weatherLoaded() {
+      if (Object.entries(this.weather).length) {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
