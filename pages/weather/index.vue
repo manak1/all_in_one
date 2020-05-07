@@ -1,5 +1,5 @@
 <template>
-  <section v-if="dataLoaded" class="p-weather">
+  <section class="p-weather">
     <div class="c-container">
       <c-hero :weather-info="weather" />
       <c-day :weathers="weathers" />
@@ -17,6 +17,7 @@ import CDay from '@/pages/weather/-CDay'
 export default {
   components: { CHero, CWeek, CDay },
   async fetch({ store, app }) {
+    console.log('called in front end since second time', store.weather)
     try {
       const data = await app.$axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
@@ -33,14 +34,7 @@ export default {
   },
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' }),
-    ...weatherMapper.mapState({ weathers: 'weatherList' }),
-
-    dataLoaded() {
-      if (this.weathers.length >= 1) {
-        return true
-      }
-      return false
-    }
+    ...weatherMapper.mapState({ weathers: 'weatherList' })
   }
 }
 </script>
