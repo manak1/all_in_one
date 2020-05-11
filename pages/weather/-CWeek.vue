@@ -91,7 +91,7 @@ export default {
   &__card {
     width: 320px;
     margin: 20px auto;
-    background-color: #222;
+    background-color: #3e434c;
     border-radius: 8px;
   }
 }
