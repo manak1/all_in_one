@@ -17,10 +17,10 @@ import CDay from '@/pages/weather/-CDay'
 export default {
   components: { CHero, CWeek, CDay },
   async fetch({ store, app }) {
+    if (Object.entries(store.getters['weather/weather']).length) {
+      return
+    }
     try {
-      if (Object.entries(store.getters['weather/weather']).length) {
-        return
-      }
       const data = await app.$axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=amagasaki&units=metric&appid=${process.env.WEATHER_API_KEY}`
       )
@@ -37,6 +37,11 @@ export default {
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' }),
     ...weatherMapper.mapState({ weathers: 'weatherList' })
+  },
+  methods: {
+    jumpToRight() {
+      this.$router.push('/qiita')
+    }
   }
 }
 </script>

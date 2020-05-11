@@ -8,20 +8,17 @@
       </div>
       <nav class="l-nav">
         <ul class="l-nav__list">
-          <li class="l-nav__item">
+          <li v-for="page in pageList" :key="page" class="l-nav__item">
             <nuxt-link
-              v-if="weatherLoaded"
-              to="/weather"
-              class="l-nav__link--active"
-              >weather</nuxt-link
+              v-if="isDataLoaded(page)"
+              class="l-nav__link"
+              :to="`/${page}`"
             >
-            <a v-else class="l-nav__link--active" href="/weather">weather</a>
-          </li>
-          <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/news">news</nuxt-link>
-          </li>
-          <li class="l-nav__item">
-            <nuxt-link class="l-nav__link" to="/qiita">qiita</nuxt-link>
+              {{ page }}
+            </nuxt-link>
+            <a v-else :href="`/${page}`" class="l-nav__link">
+              {{ page }}
+            </a>
           </li>
         </ul>
       </nav>
@@ -31,15 +28,37 @@
 
 <script>
 import { weatherMapper } from '@/store/weather'
+import { pageMapper } from '@/store/page'
 export default {
   computed: {
     ...weatherMapper.mapState({ weather: 'weatherInfo' }),
     ...weatherMapper.mapState({ weathers: 'weatherList' }),
+    ...pageMapper.mapState({ pageList: 'pages' }),
     weatherLoaded() {
       if (Object.entries(this.weather).length) {
         return true
       } else {
         return false
+      }
+    },
+    newsLoaded() {
+      return true
+    },
+    qiitaLoaded() {
+      return true
+    }
+  },
+  methods: {
+    isDataLoaded(name) {
+      switch (name) {
+        case 'weather':
+          return this.weatherLoaded
+        case 'news':
+          return this.newsLoaded
+        case 'qiita':
+          return this.qiitaLoaded
+        default:
+          return false
       }
     }
   }
