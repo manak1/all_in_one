@@ -1,27 +1,43 @@
 <template>
-  <div
-    v-touch:swipe.right="swipeRight"
-    v-touch:swipe.left="swipeLeft"
-    class="l-content"
-  >
-    <l-header />
-    <nuxt style="padding-top: 72px;" />
+  <div>
+    <l-loading v-if="loading" />
+    <div
+      v-touch:swipe.right="swipeRight"
+      v-touch:swipe.left="swipeLeft"
+      class="l-content"
+    >
+      <l-header />
+      <nuxt style="padding-top: 72px;" />
+    </div>
   </div>
 </template>
 
 <script>
 import LHeader from '@/components/layout/LHeader'
+import LLoading from '@/components/layout/LLoading'
 import { pageMapper } from '@/store/page'
 export default {
   components: {
-    LHeader
+    LHeader,
+    LLoading
   },
+  data() {
+    return {
+      loading: true
+    }
+  },
+
   computed: {
     ...pageMapper.mapState({ pageList: 'pages' }),
     getRouteName() {
       return this.$route.name
     }
   },
+
+  mounted() {
+    this.loading = false
+  },
+
   methods: {
     swipeLeft() {
       const index = this.pageList.indexOf(this.getRouteName) + 1
