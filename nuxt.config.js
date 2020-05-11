@@ -40,6 +40,10 @@ export default {
    */
   plugins: [
     {
+      src: '@/plugins/vue2-touch-events',
+      ssr: false
+    },
+    {
       src: '@/plugins/localStorage',
       ssr: false
     }

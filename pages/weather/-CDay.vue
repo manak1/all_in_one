@@ -65,10 +65,17 @@ export default {
 }
 
 .c-list {
+  z-index: 2;
   display: flex;
   padding: 6px 12px;
   margin: 0 12px;
   overflow: scroll;
+  scrollbar-width: none; /* Firefox 対応 */
+
+  &::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
+  }
 
   &__item {
     min-width: 56px;
