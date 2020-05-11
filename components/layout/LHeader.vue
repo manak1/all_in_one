@@ -11,12 +11,12 @@
           <li v-for="page in pageList" :key="page" class="l-nav__item">
             <nuxt-link
               v-if="isDataLoaded(page)"
-              class="l-nav__link"
+              :class="linkClass(page)"
               :to="`/${page}`"
             >
               {{ page }}
             </nuxt-link>
-            <a v-else :href="`/${page}`" class="l-nav__link">
+            <a v-else :href="`/${page}`" :class="linkClass(page)">
               {{ page }}
             </a>
           </li>
@@ -46,9 +46,18 @@ export default {
     },
     qiitaLoaded() {
       return true
+    },
+    getRouteName() {
+      return this.$route.name
     }
   },
   methods: {
+    linkClass(page) {
+      return {
+        'l-nav__link': true,
+        'l-nav__link--active': this.getRouteName === page
+      }
+    },
     isDataLoaded(name) {
       switch (name) {
         case 'weather':
