@@ -4,7 +4,7 @@ const Sass = require('sass')
 const Fiber = require('fibers')
 
 require('dotenv').config()
-const { WEATHER_API_KEY } = process.env
+const { WEATHER_API_KEY, NEWS_API_KEY } = process.env
 
 export default {
   mode: 'universal',
@@ -86,7 +86,8 @@ export default {
   },
 
   env: {
-    WEATHER_API_KEY
+    WEATHER_API_KEY,
+    NEWS_API_KEY
   },
   /*
    ** Build configuration
