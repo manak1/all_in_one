@@ -18,9 +18,7 @@ export default {
   components: { CHero, CWeek, CDay },
   async fetch({ store, app }) {
     try {
-      console.log(store.getters['weather/weather'])
       if (Object.entries(store.getters['weather/weather']).length) {
-        console.log('not empty')
         return
       }
       const data = await app.$axios.get(
