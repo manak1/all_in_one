@@ -58,7 +58,7 @@ export default {
     width: 320px;
     height: 96px;
     margin: 0 auto;
-    background-color: #222;
+    background-color: #3e434c;
     border-radius: 8px;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.28235);
   }

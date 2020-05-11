@@ -81,7 +81,7 @@ export default {
   width: 100%;
   max-height: 60px;
   margin-bottom: 60px;
-  background-color: #222;
+  background-color: #3e434c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   &__wrapper {

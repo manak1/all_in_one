@@ -2,6 +2,7 @@
   <div>
     <l-loading v-if="loading" />
     <div
+      v-else
       v-touch:swipe.right="swipeRight"
       v-touch:swipe.left="swipeLeft"
       class="l-content"

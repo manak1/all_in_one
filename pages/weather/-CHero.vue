@@ -50,7 +50,7 @@ export default {
     height: 140px;
     padding: 1.5rem;
     margin: 0 auto;
-    background-color: #222;
+    background-color: #3e434c;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
