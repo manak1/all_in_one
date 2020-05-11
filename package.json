@@ -39,6 +39,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "stylelint-scss": "^3.17.1",
+    "vue-spinner": "^1.0.3",
     "vue2-touch-events": "^2.2.1",
     "vuex-persistedstate": "^3.0.1"
   },
