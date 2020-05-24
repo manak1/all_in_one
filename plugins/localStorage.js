@@ -4,7 +4,7 @@ export default ({ store }) => {
   window.onNuxtReady(() => {
     createPersistedState({
       key: 'test-key',
-      paths: ['weather']
+      paths: ['weather', 'news']
     })(store)
   })
 }
