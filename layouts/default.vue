@@ -1,12 +1,7 @@
 <template>
   <div>
     <l-loading v-if="loading" />
-    <div
-      v-else
-      v-touch:swipe.right="swipeRight"
-      v-touch:swipe.left="swipeLeft"
-      class="l-content"
-    >
+    <div v-else class="l-content">
       <l-header />
       <nuxt style="padding-top: 72px;" />
     </div>
